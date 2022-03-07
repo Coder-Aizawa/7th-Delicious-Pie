@@ -9,8 +9,9 @@ screen = pygame.display.set_mode((300, 300))
 pygame.display.set_caption("Whatever")
 clock = pygame.time.Clock()
 
-test_surface = pygame.Surface((100,50))
-test_surface.fill('Blue')
+test_surface = pygame.Surface((10,10))
+test_surface.fill('Cyan')
+moveRight = 10
 while True:
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
@@ -18,6 +19,7 @@ while True:
       exit()
   clock.tick(60)
   #Draw things
-  screen.blit(test_surface, (50,50))
+  screen.blit(test_surface, (moveRight,moveRight))
+  moveRight += 1
   #update Everything
   pygame.display.update()
